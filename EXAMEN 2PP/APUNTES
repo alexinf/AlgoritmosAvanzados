@@ -1,0 +1,96 @@
+costos de algorimos
+
+Condicionales
+	*costoExpresion + max (costoSi,costoNo)
+        *max (costoSi,costoNo)
+
+if (i<n):                        -> O(1) + O (n) - > O(n)
+    O(n)
+else:
+    O(log n)
+
+
+Repeticiones conteo
+ *valIni <= i <= valFin; k>0
+ *valIni >= i >= valFin; k<0
+
+ *costoCabecera + nroVeces* costoCuerpo
+ *donde el nroVeces es la cantidad de valores validos
+   que asume la variable de conteo.
+
+ for(int i = 1 ; i<=n; i++):
+ 	...                                costoCuerpo = 1
+
+ 									   -> O(n) + n*costoCuerpo
+ 									   -> O(n) + n
+ 									   -> O(n) 
+ 
+ FOR ANIDADO SIN DEPENDENCIA
+ for(int i = 1 ; i<=n; i++):
+  	for(int j = 1 ; i<=n; i++):			costoCuerpo = 1
+  										
+  										-> O(n^k) + n^k * costoCuero
+  										-> O(n^k)
+
+FOR ANIDADO CON DEPENDENCIA
+dependencia la final
+for(int i = 1 ; i<=n; i++):
+  	for(int j = 1 ; i<=i; i++):			costoCuerpo = 1
+  										
+  										
+			-> n + n(i)
+  			-> n + Σ (i=1..n)   i
+  			-> n + n(n+1)/2
+  			-> n + (n^2 + n) /2
+  			-> 3*n/2 + (n^2) / 2
+  			-> O(n^2)
+
+FOR ANIDADO CON DEPENDENCIA
+dependencia la inicio
+for(int i = 1 ; i<=n; i++):
+  	for(int j = i ; i<=n; i++):			costoCuerpo = 1
+  										
+  										
+			-> n + n(i-n)
+  			-> n + Σ (i=1..n)   (n-i)
+  			-> n + Σ(i=1..n) n - Σ(i=1..n) i
+  			-> n + n^2 - n(n+1)/2
+  			-> n + n^2 - (n^2)/2 - n/2
+  			-> n/2 + (n^2)/2
+  			-> O(n^2)
+
+FOR ANIDADO  ENTRADAS !=
+dependencia la inicio
+for(int i = 1 ; i<=n; i++):
+  	for(int j = i ; i<=m; i++):			costoCuerpo = 1
+  										-> O(n*m) + m* costoCuero
+  										-> O(n*m)
+
+n = n-k  decrece
+n = n+k  increment		->linea O(n)
+
+n = n/k  decrece
+n = n*k  increment       -> logaritmica O(log k(n))
+
+
+teorema maestro
+
+
+
+Algoritmos 
+
+- > AUTOMATAS FINITOS
+
+- > HASH STRI
+
+- > ALGORITMO DE ARBOL DE SUFIJOS
+
+- > kmp
+
+-> rabin-karp
+
+
+Arbol de sufjos 
+Array de sufijos 
+Automata 
+Kmp
